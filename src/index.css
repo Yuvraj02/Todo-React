@@ -4,12 +4,32 @@
   box-sizing: border-box;
 }
 
+:root{
+  --main-color: #001C22;
+  --font-color: white;
+
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("./assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+
 html{
-  background-color: #001C22;
-  font-size: 16px;
+  background-color: var(--main-color);
+  font-size: 10px;
+  font-family: 'Poppins';
+  color: var(--font-color);
 }
 
 p{
-  color: white;
-  font-size: 1rem;
+  font-size: 1.6rem;
+}
+
+h1{
+  font-size: 5.4rem;
+}
+
+h2{
+  font-size: 3.6rem;
 }
