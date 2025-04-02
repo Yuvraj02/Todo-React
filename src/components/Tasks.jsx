@@ -51,7 +51,7 @@ const ListItem = styled.div`
 `
 export function Tasks({index, task, tasks, setTask}) {
 
-  const handleDelete = ((index) => {
+    const handleDelete = ((index) => {
     setTask(tasks.filter((_,i) => i !== index))
     
   })
