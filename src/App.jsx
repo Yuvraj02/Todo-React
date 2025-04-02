@@ -1,3 +1,7 @@
+/*
+  TODO : Add Date & Time 
+*/
+
 import { useState } from "react";
 import styled from "styled-components";
 import { AddTask } from "./components/AddTask";
@@ -18,8 +22,9 @@ const HomeScreen = styled.div`
 `;
 
 function App() {
-  let [tasks, setTask] = useState([])
-
+  
+  let [tasks, setTask] = useState(["Task 1", "Task 2", "Task 3"])
+  
   return (
     <>
       <HomeScreen>
@@ -28,7 +33,7 @@ function App() {
         <AddTask tasks={tasks} setTask={setTask}/>
         <ul>
           {tasks.map((task, index) => {
-            return (<Tasks key={index} task={task}/>)
+            return (<Tasks index={index} task={task} tasks={tasks} setTask={setTask}/>)
           })}
         </ul>
       </HomeScreen>
